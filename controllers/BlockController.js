@@ -30,7 +30,14 @@ class BlockController {
             (async () => {
                 res.setHeader('Content-Type', 'application/json');
 
-                res.send(await db.getBlock(req.params['index']));
+                try{
+
+                    res.send( await db.getBlock(req.params['index']));
+                }catch (error){
+                    res.status(500).send( `Error when retrieving block: ${error}`);
+
+                }
+
             })()
 
 

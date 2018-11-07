@@ -83,11 +83,11 @@ class LevelDB {
 
         if (err.type == 'NotFoundError') {
             console.log('Block ' + key + ' get failed', err);
-            return  `Block ${key} get failed  ${err}`;
+            throw  `Block ${key} get failed  ${err}`;
 
          } else {
             console.log('Block ' + key + ' get failed', err);
-            return  `Block ${key} get failed  ${err}`;
+            throw  `Block ${key} get failed  ${err}`;
         }
     }
             // let data = await db.get(key, function (err, value) {
