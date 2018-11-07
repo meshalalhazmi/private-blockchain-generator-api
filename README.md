@@ -1,4 +1,4 @@
-# Project Title
+# private blockchain generator api
 Simple node express web API to retrieve and create blocks within a local blockchain (based on node express framework)
 
 
