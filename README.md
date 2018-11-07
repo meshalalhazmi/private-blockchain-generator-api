@@ -27,8 +27,19 @@ npm start
            // this.initializeMockData();
    ```
 
+### Endpoint documentation
+- URL: http://localhost:8000/block/{block-height} (GET)
+GET method using a URL path with a block height parameter
+    - URL parameters:
+            {block-height} : required
 
-### dependencies
+- URL: http://localhost:8000/block (POST)
+POST method to add a block to the blockchain
+    - parameters:
+        body : required (must not be null)
+
+
+ ### dependencies
  - express-validator for input validation
  - level-db for data persistence
  - nodemon for local change detection
